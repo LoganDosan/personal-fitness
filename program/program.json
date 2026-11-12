@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "name": "Functional Athlete",
+    "version": "1.0 (2026-11-12)",
+    "startDate": "2026-11-09",
+    "howToEdit": "This file is the whole training plan. The app only displays it. Ask Claude to rewrite a block, session or exercise here; no app code changes needed.",
+    "limitations": [
+      "Lower back: tight, aggravated by bending and sitting. Tight hips.",
+      "Block 1 rule: no heavy barbell lifts from the floor and no high-rep barbell work for time."
+    ]
+  },
+
+  "athlete": {
+    "bodyweightLb": 210,
+    "twoMile": "12:50",
+    "paces": {
+      "easyPerMile": "8:30-9:00",
+      "rep400": "1:33-1:36",
+      "rep800": "3:15-3:20"
+    }
+  },
+
+  "rules": {
+    "comment": "Used by the rebalancer. legs/upper/intensity are scored 0-3 per session.",
+    "backToBackLegLimit": 6,
+    "maxHardDaysPerWeek": 5,
+    "hardIntensity": 2,
+    "slideIntoStimulus": ["recovery", "swim"]
+  },
+
+  "progressions": {
+    "main":      [{"sets": 4, "reps": 5, "rpe": 6}, {"sets": 4, "reps": 5, "rpe": 7}, {"sets": 5, "reps": 4, "rpe": 8}, {"sets": 2, "reps": 5, "rpe": 5}],
+    "accessory": [{"sets": 3, "reps": 8, "rpe": 7}, {"sets": 3, "reps": 10, "rpe": 7}, {"sets": 4, "reps": 8, "rpe": 8}, {"sets": 2, "reps": 8, "rpe": 6}],
+    "power":     [{"sets": 4, "reps": 3}, {"sets": 5, "reps": 3}, {"sets": 5, "reps": 3}, {"sets": 3, "reps": 3}],
+    "carry":     [{"sets": 3, "reps": "40 m each side"}, {"sets": 4, "reps": "40 m each side"}, {"sets": 4, "reps": "40 m each side"}, {"sets": 2, "reps": "40 m each side"}],
+    "top":       [{"sets": 1, "reps": 5}, {"sets": 1, "reps": 5}, {"sets": 1, "reps": 5}, {"sets": 1, "reps": 5}]
+  },
+
+  "exercises": {
+    "bench-press":       {"name": "Bench press", "e1rm": 255, "step": 5, "chart": true, "cue": "Feet planted, shoulder blades pinned. Leave 2-4 reps in the tank in Block 1.", "subs": ["DB bench press", "Machine chest press", "Weighted push-up"]},
+    "weighted-pull-up":  {"name": "Weighted pull-up", "e1rm": 300, "bodyweightPlus": true, "step": 5, "chart": true, "cue": "Log the ADDED weight. Dead hang to chin over bar, no kip.", "subs": ["Lat pulldown", "Chin-up", "Ring row"]},
+    "landmine-press":    {"name": "Half-kneeling landmine press", "e1rm": 75, "step": 5, "perSide": true, "cue": "Log plate weight. Squeeze the glute of the down knee, ribs down.", "subs": ["Half-kneeling DB press", "Standing single-arm DB press"]},
+    "chest-row":         {"name": "Chest-supported DB row", "e1rm": 82, "step": 5, "cue": "Log one dumbbell. Chest stays on the pad so the low back does no work.", "subs": ["Seated cable row", "Seal row", "Inverted row"]},
+    "split-squat":       {"name": "Rear-foot-elevated split squat", "e1rm": 55, "step": 5, "perSide": true, "cue": "Log one dumbbell. Torso tall, front shin near vertical.", "subs": ["Reverse lunge", "DB step-up", "Split squat"]},
+    "sl-rdl":            {"name": "Single-leg RDL", "e1rm": 55, "step": 5, "perSide": true, "cue": "Log one dumbbell. Hinge at the hip with a flat back; stop where the hamstring stops you.", "subs": ["45-degree back extension", "Hip thrust", "Single-leg glute bridge"]},
+    "box-jump":          {"name": "Box jump", "noLoad": true, "cue": "Max intent, land soft, STEP down. Full rest between sets.", "subs": ["Broad jump", "Squat jump", "Tuck jump"]},
+    "mb-throw":          {"name": "Med ball rotational throw", "noLoad": true, "perSide": true, "cue": "Side-on to a wall, throw from the hips like a lacrosse shot.", "subs": ["Med ball slam", "Fast band rotation", "Landmine rotation"]},
+    "suitcase-carry":    {"name": "Suitcase carry", "start": 70, "step": 5, "cue": "One heavy bell at your side. Walk tall, do not lean. This is back armor.", "subs": ["Farmer carry", "Single-arm rack carry", "Side plank 40 s each side"]},
+    "back-squat":        {"name": "Back squat (team lift)", "noSuggest": true, "chart": true, "cue": "Log your heaviest set of the day.", "subs": ["Front squat", "Trap-bar deadlift"]},
+    "hang-clean":        {"name": "Hang clean (team lift)", "noSuggest": true, "chart": true, "cue": "Log your heaviest set of the day.", "subs": ["Power clean", "Clean pull"]}
+  },
+
+  "routines": {
+    "morning": {
+      "name": "Morning mobility",
+      "about": "About 10 minutes. Built for a tight lower back and tight hips: open the hips, then switch on the core. Gentle on the first two moves; your spine is stiffest right after waking.",
+      "steps": [
+        {"name": "Cat-cow", "seconds": 60, "cue": "Hands and knees. Slow and small, move one segment at a time. Do not force the rounding."},
+        {"name": "Half-kneeling hip flexor stretch", "seconds": 45, "perSide": true, "cue": "Tuck the tailbone, squeeze the back glute, reach the same-side arm up."},
+        {"name": "90/90 hip switches", "seconds": 60, "cue": "Sit tall, both knees at 90 degrees, rotate side to side. Use hands for support if needed."},
+        {"name": "World's greatest stretch", "seconds": 45, "perSide": true, "cue": "Deep lunge, elbow toward the instep, then rotate and reach to the ceiling."},
+        {"name": "Glute bridge", "seconds": 60, "cue": "2-second squeeze at the top. Ribs down, do not arch the low back."},
+        {"name": "Bird dog", "seconds": 60, "cue": "Opposite arm and leg, 10-second holds. Nothing in the low back moves."},
+        {"name": "Side plank", "seconds": 30, "perSide": true, "cue": "Straight line ear to ankle. Drop to knees if the hips sag."},
+        {"name": "Dead bug", "seconds": 60, "cue": "Low back stays heavy on the floor while the opposite arm and leg reach."},
+        {"name": "Figure-4 glute stretch", "seconds": 30, "perSide": true, "cue": "On your back, ankle over knee, pull the legs in. Breathe out slowly."}
+      ]
+    },
+    "foam-roll": {
+      "name": "Roll and reset",
+      "about": "About 8 minutes. Slow passes, pause on tight spots, keep breathing.",
+      "steps": [
+        {"name": "Roll: glutes", "seconds": 45, "perSide": true, "cue": "Sit on the roller, cross one ankle over the knee, lean into that side."},
+        {"name": "Roll: quads and hip flexors", "seconds": 45, "perSide": true, "cue": "Face down, hip to just above the knee."},
+        {"name": "Roll: upper back", "seconds": 60, "cue": "Hands behind head, roll shoulder blades to mid-back. Stay off the low back."},
+        {"name": "Roll: lats", "seconds": 30, "perSide": true, "cue": "On your side, arm overhead, armpit to mid-rib."},
+        {"name": "Roll: calves", "seconds": 30, "perSide": true, "cue": "Cross the other leg on top for pressure."},
+        {"name": "Couch stretch", "seconds": 45, "perSide": true, "cue": "Back knee against a wall or bench, squeeze the glute, stay tall."}
+      ]
+    }
+  },
+
+  "sessions": {
+    "run-speed": {
+      "name": "Speed and intervals",
+      "stimulus": "run", "priority": 1, "minutes": 45,
+      "load": {"legs": 3, "upper": 0, "intensity": 3},
+      "lightAlt": "run-easy",
+      "why": "Monday, on fresh legs: sprint speed first, then repeat-running fitness. Standalone session, track if possible.",
+      "parts": [
+        {"kind": "work", "title": "Warm-up (12 min)", "lines": ["8 min easy jog", "Leg swings, A-skips, high knees, butt kicks: 2 x 20 m each", "2 relaxed strides"]},
+        {"kind": "work", "title": "Sprints", "log": ["rpe"], "byWeek": [
+          {"lines": ["4 x 80 m build-ups to 85%", "Walk back, full recovery", "Smooth and tall. This block is about rhythm, not straining."]},
+          {"lines": ["5 x 60 m at 90%", "Walk back plus 60 s"]},
+          {"lines": ["6 x 60 m at 95%", "Walk back plus 90 s. Stop the set if a hamstring talks to you."]},
+          {"lines": ["4 x 80 m relaxed strides at 80%"]}
+        ]},
+        {"kind": "work", "title": "Intervals", "log": ["avg_rep", "rpe", "notes"], "byWeek": [
+          {"lines": ["6 x 400 m at 1:33-1:36", "90 s walk/jog between", "No track: treadmill 6 x 1:35 at 9.4 mph, or 6 x 500 m row"]},
+          {"lines": ["4 x 800 m at 3:15-3:20", "2 min jog between", "No track: treadmill 4 x 3:15 at 9.2 mph, or 4 x 1000 m row"]},
+          {"lines": ["8 x 400 m at 1:31-1:34", "75 s walk/jog between", "No track: treadmill 8 x 1:33 at 9.6 mph, or 8 x 500 m row"]},
+          {"lines": ["Deload: 20 min easy run at 8:30-9:00 per mile", "Should feel almost too easy"]}
+        ]},
+        {"kind": "work", "title": "Cool-down", "lines": ["5 min walk or easy jog", "Calf and hip flexor stretch, 30 s each side"]}
+      ]
+    },
+
+    "run-easy": {
+      "name": "Easy run (adjusted)",
+      "stimulus": "run", "priority": 1, "minutes": 30,
+      "load": {"legs": 1, "upper": 0, "intensity": 1},
+      "why": "Your legs took a hard hit yesterday, so the intervals became an easy run.",
+      "parts": [
+        {"kind": "work", "title": "Easy run", "log": ["distance_mi", "time", "rpe"], "lines": ["25-30 min at 8:30-9:00 per mile", "You should be able to hold a conversation", "Finish with 4 x 15 s relaxed strides"]}
+      ]
+    },
+
+    "team-lift": {
+      "name": "Lacrosse team lift",
+      "stimulus": "team", "fixed": true, "minutes": 60,
+      "load": {"legs": 3, "upper": 2, "intensity": 2},
+      "why": "Mandatory. This is where your heavy squats and cleans live, so the rest of the week stays off heavy barbell leg work.",
+      "parts": [
+        {"kind": "work", "title": "Do the team's session", "lines": ["Back check: if squats or cleans light up the low back, drop the load and tell the strength coach."]},
+        {"kind": "strength", "title": "Log your top sets (optional, feeds the charts)", "items": [
+          {"ex": "back-squat", "prog": "top"},
+          {"ex": "hang-clean", "prog": "top"}
+        ]}
+      ]
+    },
+
+    "upper-mixed": {
+      "name": "Upper strength and circuit",
+      "stimulus": "upper", "priority": 2, "minutes": 60,
+      "load": {"legs": 0, "upper": 3, "intensity": 2},
+      "why": "Wednesday gives your legs a day off between the team lifts. Heavy press and pull, then a fast circuit that keeps the legs out of it.",
+      "parts": [
+        {"kind": "work", "title": "Warm-up (8 min)", "lines": ["3 min easy SkiErg or row", "Band pull-aparts x 15, scap push-ups x 10, dead hang 30 s", "2 light ramp-up sets of bench"]},
+        {"kind": "strength", "title": "A. Heavy pair (alternate, 90 s between)", "items": [
+          {"ex": "bench-press", "prog": "main"},
+          {"ex": "weighted-pull-up", "prog": "main"}
+        ]},
+        {"kind": "strength", "title": "B. Accessory pair (alternate, 60 s between)", "items": [
+          {"ex": "landmine-press", "prog": "accessory"},
+          {"ex": "chest-row", "prog": "accessory"}
+        ]},
+        {"kind": "work", "title": "C. Circuit", "log": ["rounds", "time", "rpe", "notes"], "byWeek": [
+          {"name": "Ski and Carry", "lines": ["AMRAP 12 minutes:", "12 cal SkiErg", "10 push-ups", "40 m farmer carry (heavy)", "8 hanging knee raises", "Score: rounds"]},
+          {"name": "Row Ladder", "lines": ["5 rounds, rest 60 s between:", "250 m row, hard", "8 strict pull-ups", "12 push-ups", "Score: total time"]},
+          {"name": "Engine EMOM", "lines": ["EMOM 16 (4 rounds):", "Minute 1: 14 cal SkiErg", "Minute 2: 10 DB push press", "Minute 3: 10 hanging knee raises", "Minute 4: 40 m farmer carry", "Score: rounds completed on time"]},
+          {"name": "Deload flush", "lines": ["10 min easy, nose breathing:", "3 rounds: 2 min row, 8 push-ups, 5 pull-ups"]}
+        ]}
+      ],
+      "variants": {
+        "hotel": [
+          {"kind": "work", "title": "Hotel gym version (dumbbells and a bench)", "log": ["rounds", "rpe", "notes"], "lines": ["5 x 6 DB bench press, heavy", "5 x 8 single-arm DB row each side", "3 x 8 half-kneeling DB press each side", "Then AMRAP 12: 10 push-ups, 10 DB push press, 40 m DB farmer carry, 1 min bike or treadmill hard"]}
+        ],
+        "bodyweight": [
+          {"kind": "work", "title": "Bodyweight version (no equipment)", "log": ["rounds", "rpe", "notes"], "lines": ["5 rounds, rest 60 s:", "12-20 push-ups (feet up if easy)", "8 pike push-ups", "10 towel or table rows (or max pull-ups if a bar exists)", "30 s side plank each side", "Then 10 min: 30 s burpees, 30 s rest"]}
+        ]
+      }
+    },
+
+    "swim-recovery": {
+      "name": "Swim technique",
+      "stimulus": "swim", "minutes": 20,
+      "load": {"legs": 0, "upper": 1, "intensity": 0},
+      "why": "You float fine and tire fast, which is a technique problem. Short, frequent, easy practice fixes it. Rest as long as you need; never thrash.",
+      "parts": [
+        {"kind": "work", "title": "Drills (25 yd lengths)", "log": ["distance_yd", "continuous_min", "notes"], "byWeek": [
+          {"name": "Breathing and balance", "lines": ["4 x 25 kick with a board, face in, breathe to the side", "4 x 25 push off and glide in streamline, then easy kick", "4 x 25 side kick (one arm out, face down, roll to breathe)", "4 x 25 easy freestyle: exhale steadily underwater, quick sip of air", "Rest 30-45 s after every length"]},
+          {"name": "Longer reaches", "lines": ["4 x 25 side kick", "4 x 25 catch-up drill (one hand waits out front for the other)", "6 x 50 easy freestyle, 30 s rest", "Count strokes per length and try to take fewer"]},
+          {"name": "Stringing it together", "lines": ["4 x 25 catch-up drill", "3 x 100 easy freestyle, 45 s rest", "4 x 50 breathing every 3 strokes, 30 s rest"]},
+          {"name": "Check-in", "lines": ["4 x 25 drill of choice", "Swim easy freestyle without stopping, up to 10 minutes", "Log how many minutes you lasted. At 10 minutes, swimming joins your conditioning."]}
+        ]},
+        {"kind": "routine", "title": "No pool today? Do this instead", "routine": "foam-roll"}
+      ]
+    },
+
+    "athlete-day": {
+      "name": "Athlete day",
+      "stimulus": "mixed", "priority": 3, "minutes": 60,
+      "load": {"legs": 2, "upper": 1, "intensity": 2},
+      "lightAlt": "athlete-light",
+      "why": "Jump, throw, single-leg strength, carry, then a longer mixed circuit. The session to swap for hockey or a friend's workout, and the one to drop on a 4-day week.",
+      "parts": [
+        {"kind": "work", "title": "Warm-up (8 min)", "lines": ["3 min easy bike or row", "World's greatest stretch x 5 each side, glute bridge x 10, pogo hops x 20", "2 easy box jumps"]},
+        {"kind": "strength", "title": "A. Power (full rest, quality only)", "items": [
+          {"ex": "box-jump", "prog": "power"},
+          {"ex": "mb-throw", "prog": "power"}
+        ]},
+        {"kind": "strength", "title": "B. Single-leg strength (alternate)", "items": [
+          {"ex": "split-squat", "prog": "accessory"},
+          {"ex": "sl-rdl", "prog": "accessory"}
+        ]},
+        {"kind": "strength", "title": "C. Carry", "items": [
+          {"ex": "suitcase-carry", "prog": "carry"}
+        ]},
+        {"kind": "work", "title": "D. Circuit", "log": ["rounds", "time", "rpe", "notes"], "byWeek": [
+          {"name": "Machine Triathlon", "lines": ["3 rounds, rest 2 min between:", "500 m row", "400 m SkiErg", "2 min bike", "Hold a pace you could repeat. Score: total time"]},
+          {"name": "Twenty", "lines": ["AMRAP 20 minutes:", "15 cal row", "10 burpees", "20 walking lunges", "8 pull-ups", "Score: rounds"]},
+          {"name": "Chipper", "lines": ["For time, 22 min cap:", "1000 m row", "40 goblet squats (35 lb)", "30 cal SkiErg", "20 DB box step-ups", "30 push-ups", "500 m row"]},
+          {"name": "Deload zone 2", "lines": ["15 min easy on any machine", "Nose breathing the whole time"]}
+        ]}
+      ],
+      "variants": {
+        "hotel": [
+          {"kind": "work", "title": "Hotel gym version", "log": ["rounds", "rpe", "notes"], "lines": ["4 x 3 squat jumps, full rest", "3 x 8 DB split squat each side", "3 x 8 DB single-leg RDL each side", "3 x 40 m DB suitcase carry each side", "Then AMRAP 15: 2 min treadmill or bike hard, 10 burpees, 20 walking lunges"]}
+        ],
+        "bodyweight": [
+          {"kind": "work", "title": "Bodyweight version", "log": ["rounds", "rpe", "notes"], "lines": ["4 x 3 broad jumps, full rest", "3 x 10 split squat each side, 3 s lowering", "3 x 10 single-leg glute bridge each side", "Then AMRAP 20: 200 m run (or 40 s high knees), 10 burpees, 20 walking lunges, 30 s side plank each side"]}
+        ]
+      }
+    },
+
+    "athlete-light": {
+      "name": "Athlete day (light)",
+      "stimulus": "mixed", "priority": 3, "minutes": 40,
+      "load": {"legs": 1, "upper": 1, "intensity": 1},
+      "why": "Adjusted to keep you fresh: throws, carries and easy aerobic work, with the jumps and leg strength taken out.",
+      "parts": [
+        {"kind": "work", "title": "Warm-up", "lines": ["3 min easy bike or row", "World's greatest stretch x 5 each side"]},
+        {"kind": "strength", "title": "Throw and carry", "items": [
+          {"ex": "mb-throw", "prog": "power"},
+          {"ex": "suitcase-carry", "prog": "carry"}
+        ]},
+        {"kind": "work", "title": "Zone 2", "log": ["time", "rpe"], "lines": ["20 min easy on SkiErg, rower or bike", "Nose breathing the whole time"]}
+      ]
+    },
+
+    "recovery-easy": {
+      "name": "Recovery",
+      "stimulus": "recovery", "minutes": 30,
+      "load": {"legs": 1, "upper": 0, "intensity": 0},
+      "why": "Something every day, but easy. Pick one option.",
+      "parts": [
+        {"kind": "work", "title": "Pick one", "log": ["distance_mi", "time", "notes"], "lines": ["Easy run, 20-30 min at 8:45-9:15 per mile", "or a 30-45 min walk", "or 15 min of last Thursday's swim drills"]},
+        {"kind": "routine", "title": "Then roll", "routine": "foam-roll"}
+      ]
+    }
+  },
+
+  "blocks": [
+    {
+      "id": "block-1",
+      "name": "Block 1: Rebuild",
+      "focus": "Back-friendly loading at moderate effort, sprint mechanics, aerobic base, swim basics.",
+      "weeks": [
+        {"label": "Build 1"},
+        {"label": "Build 2"},
+        {"label": "Build 3"},
+        {"label": "Deload"}
+      ],
+      "template": {
+        "mon": "run-speed",
+        "tue": "team-lift",
+        "wed": "upper-mixed",
+        "thu": "swim-recovery",
+        "fri": "team-lift",
+        "sat": "athlete-day",
+        "sun": "recovery-easy"
+      }
+    }
+  ],
+
+  "swapActivities": [
+    {"id": "team-lift", "name": "Lacrosse team lift", "covers": ["team"], "load": {"easy": {"legs": 2, "upper": 1, "intensity": 1}, "moderate": {"legs": 3, "upper": 2, "intensity": 2}, "hard": {"legs": 3, "upper": 2, "intensity": 3}}},
+    {"id": "lax-practice", "name": "Lacrosse practice", "covers": ["run"], "load": {"easy": {"legs": 1, "upper": 0, "intensity": 1}, "moderate": {"legs": 2, "upper": 1, "intensity": 2}, "hard": {"legs": 3, "upper": 1, "intensity": 3}}},
+    {"id": "run", "name": "Run (friend, solo, anything)", "covers": ["run"], "load": {"easy": {"legs": 1, "upper": 0, "intensity": 1}, "moderate": {"legs": 2, "upper": 0, "intensity": 2}, "hard": {"legs": 3, "upper": 0, "intensity": 3}}},
+    {"id": "workout-full", "name": "Friend's workout: full body or CrossFit", "covers": ["mixed"], "load": {"easy": {"legs": 1, "upper": 1, "intensity": 1}, "moderate": {"legs": 2, "upper": 2, "intensity": 2}, "hard": {"legs": 3, "upper": 2, "intensity": 3}}},
+    {"id": "workout-legs", "name": "Friend's workout: legs", "covers": ["mixed"], "load": {"easy": {"legs": 2, "upper": 0, "intensity": 1}, "moderate": {"legs": 3, "upper": 0, "intensity": 2}, "hard": {"legs": 3, "upper": 0, "intensity": 3}}},
+    {"id": "workout-upper", "name": "Friend's workout: upper body", "covers": ["upper"], "load": {"easy": {"legs": 0, "upper": 1, "intensity": 1}, "moderate": {"legs": 0, "upper": 2, "intensity": 2}, "hard": {"legs": 0, "upper": 3, "intensity": 2}}},
+    {"id": "hockey", "name": "Hockey", "covers": [], "load": {"easy": {"legs": 1, "upper": 0, "intensity": 1}, "moderate": {"legs": 2, "upper": 1, "intensity": 2}, "hard": {"legs": 3, "upper": 1, "intensity": 3}}},
+    {"id": "swim", "name": "Swim", "covers": ["swim"], "load": {"easy": {"legs": 0, "upper": 1, "intensity": 0}, "moderate": {"legs": 0, "upper": 1, "intensity": 1}, "hard": {"legs": 1, "upper": 2, "intensity": 2}}},
+    {"id": "other", "name": "Other (sailing, hike, pickup game)", "covers": [], "load": {"easy": {"legs": 0, "upper": 0, "intensity": 0}, "moderate": {"legs": 1, "upper": 1, "intensity": 1}, "hard": {"legs": 2, "upper": 1, "intensity": 2}}},
+    {"id": "rest", "name": "Nothing: rest or missed", "covers": [], "load": {"easy": {"legs": 0, "upper": 0, "intensity": 0}, "moderate": {"legs": 0, "upper": 0, "intensity": 0}, "hard": {"legs": 0, "upper": 0, "intensity": 0}}}
+  ]
+}
